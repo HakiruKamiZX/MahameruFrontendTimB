@@ -1,6 +1,11 @@
 # Mahameru Frontend
 
-Anggota Kelompok :
+[You are now in the page of **Frontend Repo**]
+
+[Click here to see our **Backend Repo**](https://github.com/DhiaReza/MahameruBackend)
+
+
+    Anggota Kelompok :
     
     Tim A :
        1. Fahreza Dhia Ananto
