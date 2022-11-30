@@ -9,13 +9,13 @@
       <ion-accordion-group :multiple="true" :value="['first', 'second']">
         <ion-accordion value="first">
           <ion-item slot="header">
-            <ion-label>Recenly Updated</ion-label>
+            <ion-label>Favorites</ion-label>
           </ion-item>
           <div slot="content">
             <ion-list lines="none">
               <ion-item>
-                <ion-button fill="clear">
-                  <ion-label>Pokemon Gym
+                <ion-button fill="clear" href="/Info">
+                  <ion-label>Mahameru Project
                   </ion-label>
                 </ion-button>
               </ion-item>
@@ -36,7 +36,7 @@
         </ion-accordion>
         <ion-accordion value="second">
           <ion-item slot="header">
-            <ion-label>Favorite</ion-label>
+            <ion-label>Your Channel</ion-label>
           </ion-item>
           <div slot="content">
             <ion-list lines="none">
@@ -68,16 +68,20 @@
   <ion-page id="main-content">
     <ion-header>
       <ion-toolbar color="primary">
+        <ion-button slot="primary">
+          <ion-icon fill="none" slot="icon-only" :icon="search">
+          </ion-icon>
+        </ion-button>
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>Channel</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
+    <ion-content class="ion-padding">
       <ion-list line="none">
         <button>
-          <ion-item  href="/Inside">
+          <ion-item href="/Inside">
             <ion-col size="2">
               <ion-thumbnail>
                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
@@ -111,7 +115,7 @@
           </ion-item>
         </button>
         <button>
-          <ion-item  href="/Inside">
+          <ion-item href="/Inside">
             <ion-col size="2">
               <ion-thumbnail>
                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
@@ -134,9 +138,10 @@
 
 <script lang="ts">
 
-import { IonContent, IonHeader, IonPage, IonToolbar, IonButton, IonAccordion, IonAccordionGroup, IonThumbnail, } from '@ionic/vue';
-import InsideChann from './Inside.vue';
+import { IonContent, IonHeader, IonPage, IonToolbar, IonButton, IonAccordion, IonAccordionGroup, IonThumbnail, IonIcon } from '@ionic/vue';
+import { search } from "ionicons/icons"
 import { defineComponent } from 'vue';
+
 
 export default defineComponent({
   name: 'ChannelOverview',
@@ -149,12 +154,13 @@ export default defineComponent({
     IonThumbnail,
     IonAccordion,
     IonAccordionGroup,
+    IonIcon,
   },
-  data() {
+  setup() {
     return {
-      component: InsideChann,
-    };
-  },
+      search,
+    }
+  }
 });
 </script>
 
@@ -162,6 +168,7 @@ export default defineComponent({
 ion-list {
   --color: dark;
 }
+
 ion-button {
   color: black;
   font-size: small;
@@ -179,13 +186,6 @@ ion-card {
   margin: 0;
 }
 
-ion-col {
-  text-align: justify;
-  text-anchor: middle;
-  text-decoration: dashed;
-  text-justify: auto;
-  text-overflow: clip;
-}
 
 ion-thumbnail {
   --border-radius: 100px;
@@ -195,10 +195,24 @@ ion-thumbnail {
 .text {
   margin-left: 1vw;
   width: 100%;
-  font-size:16px, large;
+  font-size: 16px, large;
 }
-.channelname{
+
+.channelname {
   font-weight: bold;
   padding-bottom: 2%;
+}
+
+ion-button {
+  text-align: left;
+  text-justify: auto;
+  --box-shadow: none;
+  --color: none;
+  padding-right: 1%;
+  height:max-content
+}
+
+ion-label {
+  text-align: left;
 }
 </style>
