@@ -1,5 +1,5 @@
 <template>
-    <a href="#" class="item-friend">
+    <a href="/tabs/EditContact" class="item-friend">
         <ion-grid>
             <ion-row>
                 <ion-col size="2">
