@@ -4,6 +4,10 @@ import TabsPage from '../views/TabsPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
+    path: '/',
+    redirect: '/tabs/NewFriend'
+  },
+  {
     path: '/tabs/',
     component: TabsPage,
     children: [
@@ -15,7 +19,14 @@ const routes: Array<RouteRecordRaw> = [
         path: 'NewFriend',
         component: () => import('@/views/NewFriend.vue')
       },
-      
+      {
+        path: 'EditContact',
+        component: () => import('@/views/EditContact.vue')
+      },
+      {
+        path: 'NewContact',
+        component: () => import('@/views/NewContact.vue')
+      }
     ]
   }
 ]
