@@ -8,7 +8,7 @@
     <ion-content :fullscreen="true">
       <div class="container">
         <div class="add-friend">
-          <a href="#">
+          <a href="/tabs/NewContact">
           <ion-grid>
             <ion-row>
               <ion-col size="2">
