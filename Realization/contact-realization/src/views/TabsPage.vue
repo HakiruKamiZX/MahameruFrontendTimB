@@ -3,11 +3,9 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="NewFriend" href="/tabs/NewFriend">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
-        </ion-tab-button>
-          
+        <ion-tab-button tab="NewFriend" href="/tabs/NewFriend"></ion-tab-button>
+        <ion-tab-button tab="EditContact" href="/tabs/EditContact"></ion-tab-button>
+        <ion-tab-button tab="NewContact" href="/tabs/NewContact"></ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -15,12 +13,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonPage, IonRouterOutlet } from '@ionic/vue';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'TabsPage',
-  components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonRouterOutlet },
+  components: { IonTabs, IonTabBar, IonTabButton, IonPage, IonRouterOutlet },
   setup() {
     return {
       ellipse, 
