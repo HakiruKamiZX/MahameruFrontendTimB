@@ -2,6 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/NewFriend">
+      <ion-icon fill="none" slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-back-button>
+      </ion-buttons>
         <ion-title><center>New Friend</center></ion-title>
       </ion-toolbar>
     </ion-header>
@@ -88,11 +93,11 @@ ion-input.custom {
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonAvatar } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonAvatar, IonButtons, IonBackButton } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  defineComponent({
   name: 'Tab1Page',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonAvatar }
+  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonAvatar, IonButtons, IonBackButton }
 });
 </script>
