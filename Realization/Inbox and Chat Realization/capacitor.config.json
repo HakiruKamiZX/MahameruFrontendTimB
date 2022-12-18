@@ -1,0 +1,6 @@
+{
+	"appId": "inbox.chat",
+	"appName": "inbox-chat",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

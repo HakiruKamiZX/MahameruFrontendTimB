@@ -1,0 +1,7 @@
+{
+  "name": "inbox-chat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
