@@ -1,193 +1,195 @@
 <template>
-  <ion-header>
-    <ion-toolbar>
-      <div class="inboxchat-header">
-        <h1>Inbox Chat</h1>
-      </div>
-    </ion-toolbar>
-  </ion-header>
+  <ion-page>
+    <ion-header>
+      <ion-toolbar>
+        <div class="inboxchat-header">
+          <h1>Inbox Chat</h1>
+        </div>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-content :fullscreen="false">
-    <ion-list>
-      <div class="searchbar">
-        <ion-searchbar showCancelButton="focus" class="custom"></ion-searchbar>
-      </div>
-    </ion-list>
-    <ion-list>
-      <div class="chatview">
-        <ion-item href="/viewchat">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>
-            <ion-grid>
-              <ion-col>
-                <ion-row>
-                  <ion-col>
-                    <div class="nameuserchat">
-                      <h1>Fahreza</h1>
+    <ion-content :fullscreen="false">
+      <ion-list>
+        <div class="searchbar">
+          <ion-searchbar showCancelButton="focus" class="custom"></ion-searchbar>
+        </div>
+      </ion-list>
+      <ion-list>
+        <div class="chatview">
+          <ion-item href="/viewchat">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <ion-grid>
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div class="nameuserchat">
+                        <h1>Fahreza</h1>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div class="datemessage">
+                        <h1>17-09-2022 T 19.30.00</h1>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <div class="messagetext">
+                      <h1>Halo!!!</h1>
                     </div>
-                  </ion-col>
-                  <ion-col>
-                    <div class="datemessage">
-                      <h1>17-09-2022 T 19.30.00</h1>
-                    </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <div class="messagetext">
-                    <h1>Halo!!!</h1>
-                  </div>
-                </ion-row>
-              </ion-col>
-            </ion-grid>
-          </ion-label>
-        </ion-item>
-      </div>
-    </ion-list>
-    <ion-list>
-      <div class="chatview">
-        <ion-item href="/viewchat">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>
-            <ion-grid>
-              <ion-col>
-                <ion-row>
-                  <ion-col>
-                    <div class="nameuserchat">
-                      <h1>Yohannes</h1>
-                    </div>
-                  </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-grid>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+      <ion-list>
+        <div class="chatview">
+          <ion-item href="/viewchat">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <ion-grid>
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div class="nameuserchat">
+                        <h1>Yohannes</h1>
+                      </div>
+                    </ion-col>
 
-                  <ion-col>
-                    <div class="datemessage">
-                      <h1>17-09-2022 T 19.35.00</h1>
+                    <ion-col>
+                      <div class="datemessage">
+                        <h1>17-09-2022 T 19.35.00</h1>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <div class="messagetext">
+                      <h1>Valorant? -1</h1>
                     </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <div class="messagetext">
-                    <h1>Valorant? -1</h1>
-                  </div>
-                </ion-row>
-              </ion-col>
-            </ion-grid>
-          </ion-label>
-        </ion-item>
-      </div>
-    </ion-list>
-    <ion-list>
-      <div class="chatview">
-        <ion-item href="/viewchat">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>
-            <ion-grid>
-              <ion-col>
-                <ion-row>
-                  <ion-col>
-                    <div class="nameuserchat">
-                      <h1>Adit</h1>
-                    </div>
-                  </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-grid>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+      <ion-list>
+        <div class="chatview">
+          <ion-item href="/viewchat">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <ion-grid>
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div class="nameuserchat">
+                        <h1>Adit</h1>
+                      </div>
+                    </ion-col>
 
-                  <ion-col>
-                    <div class="datemessage">
-                      <h1>17-09-2022 T 19.35.00</h1>
+                    <ion-col>
+                      <div class="datemessage">
+                        <h1>17-09-2022 T 19.35.00</h1>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <div class="messagetext">
+                      <h1>Selasa Jangan lupa ke kampus</h1>
                     </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <div class="messagetext">
-                    <h1>Selasa Jangan lupa ke kampus</h1>
-                  </div>
-                </ion-row>
-              </ion-col>
-            </ion-grid>
-          </ion-label>
-        </ion-item>
-      </div>
-    </ion-list>
-    <ion-list>
-      <div class="chatview">
-        <ion-item href="/viewchat">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>
-            <ion-grid>
-              <ion-col>
-                <ion-row>
-                  <ion-col>
-                    <div class="nameuserchat">
-                      <h1>Farras</h1>
-                    </div>
-                  </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-grid>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+      <ion-list>
+        <div class="chatview">
+          <ion-item href="/viewchat">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <ion-grid>
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div class="nameuserchat">
+                        <h1>Farras</h1>
+                      </div>
+                    </ion-col>
 
-                  <ion-col>
-                    <div class="datemessage">
-                      <h1>17-09-2022 T 19.35.00</h1>
+                    <ion-col>
+                      <div class="datemessage">
+                        <h1>17-09-2022 T 19.35.00</h1>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <div class="messagetext">
+                      <h1>Gas</h1>
                     </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <div class="messagetext">
-                    <h1>Gas</h1>
-                  </div>
-                </ion-row>
-              </ion-col>
-            </ion-grid>
-          </ion-label>
-        </ion-item>
-      </div>
-    </ion-list>
+                  </ion-row>
+                </ion-col>
+              </ion-grid>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
 
-    <ion-list>
-      <div class="chatview">
-        <ion-item href="/viewchat">
-          <ion-avatar slot="start">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>
-            <ion-grid>
-              <ion-col>
-                <ion-row>
-                  <ion-col>
-                    <div class="nameuserchat">
-                      <h1>Farras</h1>
-                    </div>
-                  </ion-col>
+      <ion-list>
+        <div class="chatview">
+          <ion-item href="/viewchat">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <ion-grid>
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div class="nameuserchat">
+                        <h1>Farras</h1>
+                      </div>
+                    </ion-col>
 
-                  <ion-col>
-                    <div class="datemessage">
-                      <h1>17-09-2022 T 19.35.00</h1>
+                    <ion-col>
+                      <div class="datemessage">
+                        <h1>17-09-2022 T 19.35.00</h1>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <div class="messagetext">
+                      <h1>Gas</h1>
                     </div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <div class="messagetext">
-                    <h1>Gas</h1>
-                  </div>
-                </ion-row>
-              </ion-col>
-            </ion-grid>
-          </ion-label>
-        </ion-item>
-      </div>
-    </ion-list>
-    <ion-fab vertical="bottom" horizontal="end">
-      <ion-fab-button href="/newchat">
-        <ion-icon :icon="add"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-  </ion-content>
+                  </ion-row>
+                </ion-col>
+              </ion-grid>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+      <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button href="/newchat">
+          <ion-icon :icon="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-content>
+  </ion-page>
 </template>
 
 <script lang="ts">
-import { IonHeader, IonToolbar, IonContent, IonList, IonSearchbar, IonAvatar, IonLabel, IonGrid, IonCol, IonRow , IonFab, IonFabButton, IonIcon } from '@ionic/vue';
+import { IonHeader, IonToolbar, IonContent, IonList, IonSearchbar, IonAvatar, IonLabel, IonGrid, IonCol, IonRow, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { add } from 'ionicons/icons';
 
@@ -198,8 +200,8 @@ export default defineComponent({
     IonToolbar,
     IonContent, IonList, IonSearchbar, IonAvatar, IonLabel, IonGrid, IonCol, IonRow, IonFab, IonFabButton, IonIcon
   },
-  setup(){
-    return{ add }
+  setup() {
+    return { add }
   }
 });
 </script>
@@ -280,8 +282,7 @@ ion-searchbar.md.custom {
 }
 
 ion-fab-button {
-  --background: #ff884b; 
+  --background: #ff884b;
   --border-radius: 50%;
 }
-
 </style>
