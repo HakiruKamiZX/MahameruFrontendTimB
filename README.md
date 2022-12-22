@@ -1,6 +1,6 @@
 # Mahameru Frontend
 
-[You are now in the page of **Sprint-2 Frontend Repo**]
+[You are now in the page of **Sprint-6 Frontend Repo**]
 
 [Click here to see the **Mockups**](https://github.com/DhiaReza/MahameruFrontend/tree/Sprint-6/Mockups)
 
