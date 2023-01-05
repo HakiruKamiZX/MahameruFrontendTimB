@@ -1,0 +1,8 @@
+{
+  "name": "Contact_Realization",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "0c2b92ef"
+}

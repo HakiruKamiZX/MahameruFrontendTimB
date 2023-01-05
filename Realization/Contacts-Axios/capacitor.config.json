@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Contact_Realization",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
