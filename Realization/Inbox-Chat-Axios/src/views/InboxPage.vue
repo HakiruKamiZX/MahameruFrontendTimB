@@ -15,7 +15,7 @@
         </div>
       </ion-list>
       <ion-list>
-        <div class="chatview" v-for="chat in chats" :key="chat.id">
+        <div class="chatview" v-for="chat in chats" :key="chat._id">
           <ion-item href="/viewchat">
             <ion-avatar slot="start">
               <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
@@ -26,18 +26,18 @@
                   <ion-row>
                     <ion-col>
                       <div class="nameuserchat">
-                        <h1>{{ chat.to_telp }}</h1>
+                        <h1>{{ chat.sender.name }}</h1>
                       </div>
                     </ion-col>
                     <ion-col>
                       <div class="datemessage">
-                        <h1>{{ calculateTimeDifference(chat.sent) }}</h1>
+                        <h1>{{ calculateTimeDifference(chat.latest_message.sent) }}</h1>
                       </div>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <div class="messagetext">
-                      <h1>{{ chat.message }}</h1>
+                      <h1>{{ chat.latest_message.message }}</h1>
                     </div>
                   </ion-row>
                 </ion-col>
@@ -46,7 +46,7 @@
           </ion-item>
         </div>
       </ion-list>
-      <ion-fab horizontal="end">
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
         <ion-fab-button href="/newchat">
           <ion-icon :icon="add"></ion-icon>
         </ion-fab-button>
@@ -72,17 +72,35 @@ export default defineComponent({
   data() {
     return {
       add,
-      to_telp: '',
+      to_telp: "",
       chats: [{
-        id: 0,
-        to_telp: '',
-        message: '',
-        sent: ``,
+        _id: "",
+        latest_message: {
+          message: "",
+          sent: "",
+        },
+        sender: {
+          name: "",
+        },
+        sender_id: "",
       }],
     };
   },
 
+  mounted() {
+    this.getData();
+  },
+
   methods: {
+    async getData() {
+      try {
+        const response = await axios.get(`http://127.0.0.1:5000/inbox/<to_telp>=${this.to_telp}`);
+        this.chats = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
     calculateTimeDifference(sent: string) {
       const sentMoment = moment(sent, "MM/DD/YYYY, HH:mm:ss");
       const currentTime = moment();
@@ -103,23 +121,13 @@ export default defineComponent({
 
   created() {
     // Timer untuk memperbarui selisih waktu setiap 1 menit
+    this.getData();
+
     setInterval(() => {
       this.chats.forEach((chat: any) => {
         chat.timeDifference = this.calculateTimeDifference(chat.sent);
       });
     }, 60000); // Set interval to 1 minute
-
-    // Fungsi untuk mengambil daftar pesan dari server
-    const getChats = async () => {
-      try {
-        const response = await axios.get(`http://127.0.0.1:5000/getchat/all`); // Sesuaikan dengan URL endpoint yang digunakan untuk mengambil daftar pesan
-          this.chats = response.data; // Simpan daftar pesan ke dalam data property
-      }
-      catch (error) {
-        console.error(error);
-      }
-    }
-    getChats(); // Panggil fungsi untuk mengambil daftar pesan
   },
 });
 </script>
