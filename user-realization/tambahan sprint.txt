@@ -1,0 +1,17 @@
+buat sign out untuk user
+buat web api untuk mengecek duplicate phone / user 
+register harus cek
+objek harus life di semua halaman 
+harus ada variable global 
+simpan nickname nya juga
+-------------------------------
+
+ketika halaman user profile dibuka dapat kan global object user id .
+kemudian panggil route di backend yang mengembalikan ud=ser profile dari user id teersebut.
+
+---------------------------------
+
+
+ketika save change delete user harus ada konfirmasi
+
+(tabel user kgk ada contact id)
